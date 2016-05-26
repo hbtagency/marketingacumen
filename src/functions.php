@@ -1,4 +1,5 @@
 <?php // ==== FUNCTIONS ==== //
+require_once('wp_bootstrap_navwalker.php');
 
 // Load the configuration file for this installation; all options are set here
 if ( is_readable( trailingslashit( get_stylesheet_directory() ) . 'functions-config.php' ) )
@@ -32,8 +33,8 @@ function voidx_setup() {
     $content_width = (int) 960;
 
   // Register header and footer menus
-  register_nav_menu( 'header', __( 'Header menu', 'voidx' ) );
-  register_nav_menu( 'footer', __( 'Footer menu', 'voidx' ) );
+  //register_nav_menu( 'header', __( 'Header menu', 'voidx' ) );
+  //register_nav_menu( 'footer', __( 'Footer menu', 'voidx' ) );
 
 }
 add_action( 'after_setup_theme', 'voidx_setup', 11 );
@@ -51,3 +52,16 @@ function voidx_widgets_init() {
   ) );
 }
 add_action( 'widgets_init', 'voidx_widgets_init' );
+
+
+register_nav_menus( array(
+    'primary' => __( 'Primary Menu', 'MA' ),
+) );
+
+
+
+
+
+
+
+

@@ -1,6 +1,7 @@
 <?php get_header(); ?>
   <div id="wrap-content" class="wrap-content">
     <div id="content" class="site-content">
+      <!--  
       <section id="primary" class="content-area">
         <main id="main" class="site-main">
         <?php if ( have_posts() ) {
@@ -32,8 +33,8 @@
         <?php } ?>
         </main>
         <?php voidx_post_navigation(); ?>
-      </section>
+      </section>-->
     </div>
   </div>
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>

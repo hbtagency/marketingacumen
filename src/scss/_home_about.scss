@@ -1,0 +1,24 @@
+.home_about{
+    padding:50px 0;
+    .wpb_wrapper{
+        text-align: center;
+        h2{
+            position:relative;
+            display:inline-block;
+            margin:15px auto 30px auto;
+            font-size:45px;
+        }
+        h2:after{
+            content:"";
+            display:block;
+            width:70px;
+            height:5px;
+            background-color:#efe002;
+            margin:15px auto 0 auto;
+        }
+        p{
+            font-size:20px;
+            line-height: 180%;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.two-cols-img-text{
+    position:relative;
+    overflow:hidden;
+    background-color:#000;
+    .vc_column_container>.vc_column-inner{
+        padding:0 !important;
+    }
+    .two-col-right{
+        padding:15px 30px;
+        color:#fff;
+        margin-bottom:0 !important;
+
+        h2{
+            font-weight:light;
+            font-size:30px;
+            margin:15px 0;
+        }
+        ul{
+            padding-left:25px;
+            li{
+                list-style-image: url('./img/check.png');
+                font-size:16px;
+                margin:10px 15px;
+                line-height: 200%;
+                padding-left:25px;
+            }
+        }
+    }
+    
+    .wpb_single_image img{
+        position:absolute;
+        left:0;
+    }
+}
+
+@media (min-width:$screen-md-min) and (max-width:$screen-md-max){
+    .two-cols-img-text{
+
+        .two-col-right{
+            padding:15px 10px 15px 15px;
+            color:#fff;
+            h2{
+                font-weight:light;
+                font-size:20px;
+                margin:15px 5px;
+            }
+            ul{
+                padding-left:25px;
+                li{
+                    list-style-image: url('./img/check.png');
+                    font-size:14px;
+                    margin:5px;
+                    line-height: 200%;
+                    padding-left:15px;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (min-width:$screen-sm-min) and (max-width:$screen-sm-max){
+    .two-cols-img-text{
+
+        .two-col-right{
+            padding:15px 10px 15px 15px;
+            color:#fff;
+
+            h2{
+                font-weight:light;
+                font-size:20px;
+                margin:10px 5px;
+            }
+            ul{
+                padding-left:25px;
+                li{
+                    list-style-image: url('./img/check.png');
+                    font-size:14px;
+                    margin:5px;
+                    line-height: 130%;
+                    padding-left:15px;
+                    margin-bottom:0 !important;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width:$screen-xs-max){
+    .two-cols-img-text{
+        .wpb_single_image img{
+             width:100%;
+             background-color:#000;
+             opacity: 0.5;
+        }
+        
+        
+    }
+}

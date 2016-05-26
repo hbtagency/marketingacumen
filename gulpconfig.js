@@ -19,7 +19,7 @@ module.exports = {
   , notify: false // In-line notifications (the blocks of text saying whether you are connected to the BrowserSync server or not)
   , open: true // Set to false if you don't like the browser window opening automatically
   , port: 3000 // Port number for the live version of the site; default: 3000
-  , proxy: 'localhost:8080' // We need to use a proxy instead of the built-in server because WordPress has to do some server-side rendering for the theme to work
+  , proxy: 'localhost/marketingacumen/' // We need to use a proxy instead of the built-in server because WordPress has to do some server-side rendering for the theme to work
   , watchOptions: {
       debounceDelay: 2000 // This introduces a small delay when watching for file change events to avoid triggering too many reloads
     }
@@ -56,6 +56,7 @@ module.exports = {
         modules+'timeago/jquery.timeago.js' // The modules directory contains packages downloaded via npm
       , src+'js/responsive-menu.js'
       , src+'js/core.js'
+      , src+'js/test.js'
       ]
       // The pageloader chunk provides an example of how you would add a user-configurable feature to your theme; you can delete this if you wish
       // Have a look at the `src/inc/assets.php` to see how script bundles could be conditionally loaded by a theme
@@ -134,6 +135,6 @@ module.exports = {
     , theme:        src+'**/*.php'
     , livereload:   build+'**/*'
     }
-  , watcher: 'livereload' // Modify this value to easily switch between BrowserSync ('browsersync') and Livereload ('livereload')
+  , watcher: 'browsersync' // Modify this value to easily switch between BrowserSync ('browsersync') and Livereload ('livereload')
   }
 }

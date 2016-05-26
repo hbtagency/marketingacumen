@@ -1,0 +1,46 @@
+.captions{
+    width:45%;
+    min-width:300px;
+    background-color:rgba(255,255,255,0.2);
+    padding:15px;
+    p{
+        width:100%;
+        display:block;
+        white-space: pre-line;
+        line-height: 200% !important;
+        font-size:25px;
+    }
+}
+
+@media  (min-width:$screen-sm-min) and (max-width:$screen-sm-max){
+    .captions{
+        width:500px;
+        margin-left:130px;
+        p{
+            line-height: 26px !important;
+            font-size:22px !important;
+        }
+    }
+}
+
+@media  (min-width:$screen-xs-min) and (max-width:$screen-xs-max){
+    .captions{
+        width:400px;
+        margin-left:130px;
+        p{
+            line-height: 26px !important;
+            font-size:20px !important;
+        }
+    }
+}
+
+@media (max-width:$screen-xxs-max){
+    .captions{
+        width:300px;
+        margin-left:50px;
+        p{
+            line-height: 20px !important;
+            font-size:16px !important;
+        }
+    }
+}

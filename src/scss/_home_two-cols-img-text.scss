@@ -1,4 +1,12 @@
 .two-cols-img-text{
+    .two-cols-left{
+        .vc_column-inner{
+            height:450px;
+            background-size:cover;
+            background-position: right;
+        }
+    }
+    
     position:relative;
     overflow:hidden;
     background-color:#000;
@@ -11,9 +19,9 @@
         margin-bottom:0 !important;
 
         h2{
-            font-weight:light;
-            font-size:30px;
-            margin:15px 0;
+            font-weight:lighter !important;
+            font-size:28px;
+            margin:10px 0 20px 10px;
         }
         ul{
             padding-left:25px;
@@ -23,6 +31,7 @@
                 margin:10px 15px;
                 line-height: 200%;
                 padding-left:25px;
+                max-width:420px;
             }
         }
     }
@@ -40,7 +49,6 @@
             padding:15px 10px 15px 15px;
             color:#fff;
             h2{
-                font-weight:light;
                 font-size:20px;
                 margin:15px 5px;
             }
@@ -68,7 +76,6 @@
             color:#fff;
 
             h2{
-                font-weight:light;
                 font-size:20px;
                 margin:10px 5px;
             }
@@ -95,7 +102,56 @@
              background-color:#000;
              opacity: 0.5;
         }
-        
-        
+        .two-col-right{
+            padding:0px 10px 35px 15px;
+            color:#fff;
+            margin-top:-20px;
+            h2{
+                font-size:20px;
+                margin:0px 5px;
+            }
+            ul{
+                padding-left:25px;
+                li{
+                    list-style-image: url('./img/check.png');
+                    font-size:14px;
+                    margin:5px;
+                    line-height: 130%;
+                    padding-left:15px;
+                    margin-bottom:0 !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:$screen-xxs-max){
+    .two-cols-img-text{
+        display:none;
+        .wpb_single_image img{
+             width:100%;
+             background-color:#000;
+             opacity: 0.5;
+        }
+        .two-col-right{
+            padding:0px 5px 15px 5px;
+            color:#fff;
+            margin-top:-45px;
+            h2{
+                font-size:20px;
+                margin:0px 5px;
+            }
+            ul{
+                padding-left:25px;
+                li{
+                    list-style-image: url('./img/check.png');
+                    font-size:12px;
+                    margin:5px;
+                    line-height: 130%;
+                    padding-left:15px;
+                    margin-bottom:0 !important;
+                }
+            }
+        }
     }
 }

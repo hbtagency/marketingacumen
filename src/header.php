@@ -4,7 +4,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title><?php wp_title( '-', true, 'right' ); ?></title>
+<meta name="description" content="<?php bloginfo('description') ?>"/>
+<meta name="keywords" content=""/>
+<meta name="author" content="HBT | hbtagency.com.au">
+<title><?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
@@ -22,7 +25,7 @@
       <div class="container nav-container">
          <div class="row">
             <div class="logo-wrapper col-md-3 col-sm-4 col-xs-7">
-                <a href="/">
+                <a href="<?php echo bloginfo('url'); ?>">
                     <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="search"/>
                 </a>
             </div>    
@@ -56,22 +59,20 @@
                         </div>
                     </nav>
             </div>
-            <!--
-            <div class="search-wrapper col-md-1 col-sm-1 hidden-xs">
-                <div id="search-icon" class="search-icon">
-                    <a href="#">
-                        <img src="<?php //echo get_template_directory_uri(); ?>/img/search.jpg" alt="search"/>
-                    </a>
-                </div>
-                <div class="search-form hidden">
-                    <?php //get_search_form(); ?>
-                </div>
-            </div>
-            -->
          </div>
       </div>
-          <?php echo do_shortcode("[rev_slider main-slider]")?>
-
-      
+      <?php
+        if(is_front_page()){         
+            echo do_shortcode("[rev_slider main-slider]");
+        }else{?>
+            <div class="header-banner" style="background:url('<?php echo get_template_directory_uri(); ?>/img/banner.jpg') no-repeat;background-size:cover;">
+                 <div class="captions">
+                      <span class="title"><h1><?php echo $post->post_name;?></h1></span>
+                      <span class="desc"></span>
+                      <span class=""><h4><?php custom_breadcrumbs(); ?></h4></span>
+                 </div>
+            </div>
+        <?php }
+      ?>
   </header>  
 

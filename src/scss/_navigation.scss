@@ -81,3 +81,118 @@
         }
     }
 }
+
+
+
+@media (min-width:$screen-xs-min) and (max-width:$screen-xs-max){
+    .logo-wrapper{
+        position:absolute;
+        left:15px;
+        z-index:11;
+    }
+    
+    .nav-container{
+        height:100px;
+        button.navbar-toggle{
+            right:10px;
+            top:25px;
+        }
+    }
+    .nav-wrapper{
+        width:100%;
+        text-align: center;
+        ul.pull-right{
+            float:none !important;
+            margin-left:-15px;
+            
+        }
+    }
+    
+    div#bs-example-navbar-collapse-1 {
+        position: absolute;
+        width: 100%;
+        z-index: 999999;
+        left: 0;
+        top: 100px;
+        background-color: #fff;
+    }
+}
+
+@media (min-width:$screen-xxs-min) and (max-width:$screen-xxs-max){
+
+   .logo-wrapper{
+        position:absolute;
+        left:15px;
+        z-index:11;
+    }
+
+    .nav-wrapper{
+        width:100%;
+        text-align: center;
+        ul.pull-right{
+            float:none !important;
+            margin-left:-15px;
+            
+        }
+    }
+
+    .nav-container{
+        height:80px;
+        button.navbar-toggle{
+            right:10px;
+            top:15px;
+        }
+    }
+    
+    div#bs-example-navbar-collapse-1 {
+        position: absolute;
+        width: 100%;
+        z-index: 999999;
+        left: 0;
+        top: 80px;
+        background-color: #fff;
+    }
+    
+    .navbar-default .navbar-toggle{
+        background-color:#fff;
+    }
+
+}
+
+
+@media (max-width:$screen-xxxs-max){
+
+   .logo-wrapper{
+        position:absolute;
+        left:15px;
+        z-index:11;
+    }
+    
+    .nav-wrapper{
+        width:100%;
+        text-align: center;
+        ul.pull-right{
+            float:none !important;
+            margin-left:-15px;
+            
+        }
+    }
+    
+    .nav-container{
+        height:68px;
+        button.navbar-toggle{
+            right:10px;
+            top:7px;
+        }
+    }
+    
+    div#bs-example-navbar-collapse-1 {
+        position: absolute;
+        width: 100%;
+        z-index: 999999;
+        left: 0;
+        top: 60px;
+        background-color: #fff;
+    }
+
+}

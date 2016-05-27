@@ -56,7 +56,7 @@ module.exports = {
         modules+'timeago/jquery.timeago.js' // The modules directory contains packages downloaded via npm
       , src+'js/responsive-menu.js'
       , src+'js/core.js'
-      , src+'js/test.js'
+      , src+'js/footer-socials.js'
       ]
       // The pageloader chunk provides an example of how you would add a user-configurable feature to your theme; you can delete this if you wish
       // Have a look at the `src/inc/assets.php` to see how script bundles could be conditionally loaded by a theme

@@ -1,10 +1,11 @@
 <?php 
 /*
-* Template Name: Home Template
+* Template Name: About Template
 */
 get_header(); 
 ?>
 <div class="full-container">
+<section class="container">
      <?php if ( have_posts() ) {
             while ( have_posts() ) : the_post(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
@@ -20,6 +21,7 @@ get_header();
                 <?php get_search_form(); ?>
             </article>
     <?php } ?>
+</section>
 </div>
 <?php //get_sidebar(); ?>
 <?php get_footer(); ?>

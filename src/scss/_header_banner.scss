@@ -1,15 +1,114 @@
 .header-banner{
     min-height:380px;
+    text-align: center;
+    position:relative;
+    
     .captions{
+        display:inline-block;
+        margin:auto;
+        background-color:rgba(0,0,0,0.3);
+        width:auto;
+        position:absolute;
+        width:100%;
+        height:380px;
+        top:0;
+        left:0;
+        padding-top:60px;
         .title{
             h1{
                 color:#fff;
+                text-transform: uppercase;
+                font-size:80px;
+            }
+            h1:after{
+                content:"";
+                display:block;
+                width:70px;
+                height:5px;
+                background-color:#efe002;
+                margin:15px auto 0 auto;
             }                
 
         }
         .description{
-                color:#fff;
+            color:#fff;
+        }
+        .breadcrumbs{
+            display:inline-block;
+            padding:0;
+            margin:0;
+            li{
+                a:hover{
+                    color:#999;
+                }
+            }
         }
     }
 }
+
+@media (min-width:$screen-xs-min) and (max-width:$screen-xs-max){
+    .header-banner{
+        .captions{
+            .title{
+                h1{
+                    font-size:70px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:$screen-xxs-min) and (max-width:$screen-xxs-max){
+    .header-banner{
+        min-height:300px;
+        .captions{
+            height:300px;
+            .title{
+                h1{
+                    font-size:50px;
+                }
+            }
+        }
+    }
+}
+@media (max-width:$screen-xxxs-max){
+    .header-banner{
+        min-height:200px;
+        .captions{
+            padding-top:40px;
+            text-align: left;
+            height:200px;
+            .title{
+                h1{
+                    font-size:30px;
+                    display:block;
+                    float:left;
+                }
+                h1:after{
+                    float:left;
+                    content:"";
+                    display:block;
+                    width:50px;
+                    height:3px;
+                    background-color:#efe002;
+                    margin:5px auto 0 auto;
+                    position:absolute;
+                }
+            }
+        }
+        .breadcrumbs{
+            li{
+                a{
+                    font-size:16px;
+                    font-weight:lighter;
+                }
+                strong{
+                    font-size:16px;
+                    font-weight:lighter;
+                }
+            }
+        }
+    }
+}
+
 

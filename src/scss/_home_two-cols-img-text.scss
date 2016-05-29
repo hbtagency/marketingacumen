@@ -3,7 +3,7 @@
         .vc_column-inner{
             height:450px;
             background-size:cover;
-            background-position: right;
+            background-position: top right;
         }
     }
     
@@ -56,7 +56,6 @@
                 padding-left:25px;
                 li{
                     list-style-image: url('./img/check.png');
-                    font-size:14px;
                     margin:5px;
                     line-height: 200%;
                     padding-left:15px;
@@ -83,9 +82,7 @@
                 padding-left:25px;
                 li{
                     list-style-image: url('./img/check.png');
-                    font-size:14px;
                     margin:5px;
-                    line-height: 130%;
                     padding-left:15px;
                     margin-bottom:0 !important;
                 }
@@ -114,24 +111,29 @@
                 padding-left:25px;
                 li{
                     list-style-image: url('./img/check.png');
-                    font-size:14px;
                     margin:5px;
-                    line-height: 130%;
                     padding-left:15px;
                     margin-bottom:0 !important;
                 }
             }
         }
     }
+    
+    
+    .two-cols-right.wpb_column.vc_column_container.vc_col-sm-6 {
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        background-color: rgba(0,0,0,0.2);
+        height: 100%;
+        padding-top:90px;
+    }
 }
 
 @media (max-width:$screen-xxs-max){
     .two-cols-img-text{
-        display:none;
         .wpb_single_image img{
              width:100%;
-             background-color:#000;
-             opacity: 0.5;
         }
         .two-col-right{
             padding:0px 5px 15px 5px;
@@ -145,13 +147,22 @@
                 padding-left:25px;
                 li{
                     list-style-image: url('./img/check.png');
-                    font-size:12px;
+                    font-size:14px;
+                    line-height:190%;
                     margin:5px;
-                    line-height: 130%;
                     padding-left:15px;
                     margin-bottom:0 !important;
                 }
             }
         }
+    }
+    
+    .two-cols-right.wpb_column.vc_column_container.vc_col-sm-6 {
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        background-color: rgba(0,0,0,0.2);
+        height: 100%;
+        padding-top:90px;
     }
 }

@@ -1,0 +1,76 @@
+.contact-content{
+        padding-top:0;
+    }
+.contact{
+    padding:30px 15px;
+    
+    input{
+        padding:8px 12px;
+        border-radius: 3px;
+        -webkit-border-radius:3px;
+        -moz-border-radius:3px;
+        width:100%;
+        &::-webkit-input-placeholder {
+            color: #999;
+            }
+
+            &:-moz-placeholder { /* Firefox 18- */
+            color: #999;
+            }
+
+            &::-moz-placeholder {  /* Firefox 19+ */
+            color: #999;
+            }
+
+            &:-ms-input-placeholder {  
+            color: #999;
+            }
+    }
+    textarea{
+        padding:8px 12px;
+        border-radius: 3px;
+        -webkit-border-radius:3px;
+        -moz-border-radius:3px;
+        width:100%;
+                &::-webkit-input-placeholder {
+            color: #999;
+            }
+
+            &:-moz-placeholder { /* Firefox 18- */
+            color: #999;
+            }
+
+            &::-moz-placeholder {  /* Firefox 19+ */
+            color: #999;
+            }
+
+            &:-ms-input-placeholder {  
+            color: #999;
+            }
+    }
+    input[type=submit]{
+        display:block;
+        max-width:100px;
+        background-color:#000;
+        color:#fff;
+        border:none;
+        &:hover{
+            background-color:#333;
+        }
+    }
+
+}
+
+.contact-google-map{
+    padding:0 !important;
+    margin:0;
+    .vc_column-inner{
+        padding:0 !important;
+        border:0;
+        .wpb_gmaps_widget .wpb_wrapper{
+            background-color:#ddd;
+            padding:0;
+            padding-top:5px;
+        }
+    }
+}

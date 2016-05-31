@@ -37,3 +37,38 @@ img {
   height: auto;
   max-width: 100%;
 }
+
+/* General Template */
+.general-content{
+    ul{
+       padding-left:0; 
+       li{
+           padding-left:0;
+           margin-left:15px;
+       }
+    }
+    padding: 40px 0;
+    h2:after{
+        content:"";
+        display:block;
+        width:70px;
+        height:5px;
+        background-color:#efe002;
+        margin:20px 0 0 0;
+    }
+    
+    blockquote{
+        margin:15px 0;
+        padding:15px 15px 5px 15px;
+        -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0 0 6px rgba(0,0,0,0.5);
+        box-shadow: 0 0 6px rgba(0,0,0,0.5);
+        border-left:0.5em solid #efe002;
+    }
+    
+    footer{
+        background-color:#fff;
+        color:#000;
+    }
+}
+

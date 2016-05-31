@@ -10,7 +10,6 @@ get_header();
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
                 <div class="body-content">
                     <?php the_content(); ?>
-                    <?php //wp_link_pages(); ?>
                 </div>
             </article>
             <?php endwhile;
@@ -21,5 +20,4 @@ get_header();
             </article>
     <?php } ?>
 </div>
-<?php //get_sidebar(); ?>
 <?php get_footer(); ?>

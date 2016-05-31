@@ -1,22 +1,23 @@
 <?php get_header(); ?>
-  <div class="wrap-content container general-content">
-    <div class="site-content col-md-9 col-xs-12 col-sm-12">
+  <div id="wrap-content" class="wrap-content">
+    <div id="content" class="site-content">
       <section id="primary" class="content-area">
         <main id="main" class="site-main">
         <?php if ( have_posts() ) {
           while ( have_posts() ) : the_post(); ?>
-            <?php $catgory = get_the_category(); 
-             ?> 
-            <?php if($catgory[0]->name != "TEMPLATE ElEMENT") : ?> 
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
               <header class="entry-header">
-                <h2><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+                <h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
               </header>
+              <footer class="entry-meta">
+                <?php printf( __( 'Posted <time datetime="%1$s">%2$s</time> by %3$s. ', 'voidx' ), get_post_time('c'), get_the_date(), get_the_author() ); ?>
+                <?php _e( 'Categories: ', 'voidx' ); the_category( ', ' ); echo '. '; ?>
+              </footer>
               <div class="entry-content">
                 <?php the_content(); ?>
+                <?php wp_link_pages(); ?>
               </div>
             </article>
-          <?php endif;?>
           <?php endwhile;
         } else { ?>
           <article id="post-0" class="post no-results not-found">
@@ -33,8 +34,6 @@
         <?php voidx_post_navigation(); ?>
       </section>
     </div>
-    <div class="siderbar col-md-3 hidden-xs hidden-sm">
-    <?php get_sidebar(); ?>
-    </div>
   </div>
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>

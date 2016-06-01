@@ -1,6 +1,4 @@
-.contact-content{
-        padding-top:0;
-    }
+
 .contact{
     padding:30px 15px;
     
@@ -10,6 +8,7 @@
         -webkit-border-radius:3px;
         -moz-border-radius:3px;
         width:100%;
+        border:1px solid #999;
         &::-webkit-input-placeholder {
             color: #999;
             }
@@ -61,6 +60,7 @@
 
 }
 
+/* Not in use but reserved */
 .contact-google-map{
     padding:0 !important;
     margin:0;

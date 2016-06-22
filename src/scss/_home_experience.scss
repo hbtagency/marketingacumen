@@ -19,11 +19,12 @@
 }
 .experience-button{
     .vc_btn3.vc_btn3-size-md{
-        :hover{
-            background-color:#fef026;
-            border-color:#000 !important;  
+        background-image:none !important;
+        &:hover{
+            background-color:#ddd020 !important;
         }
     }
+
 }
 
 @media (max-width:$screen-xs-max){

@@ -31,7 +31,7 @@
                 margin:10px 15px;
                 line-height: 200%;
                 padding-left:25px;
-                max-width:420px;
+                max-width:460px;
             }
         }
     }
@@ -39,6 +39,16 @@
     .wpb_single_image img{
         position:absolute;
         left:0;
+    }
+}
+
+.no-bullet{
+    .two-col-right{
+        ul{
+            li{
+                list-style-image: none;
+            }
+        }
     }
 }
 

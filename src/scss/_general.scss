@@ -60,15 +60,23 @@ img {
     blockquote{
         margin:15px 0;
         padding:15px 15px 5px 15px;
-        -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.5);
-        -moz-box-shadow: 0 0 6px rgba(0,0,0,0.5);
-        box-shadow: 0 0 6px rgba(0,0,0,0.5);
         border-left:0.5em solid #efe002;
     }
-    
+    p{
+        line-height:180%;
+    }
     footer{
         background-color:#fff;
         color:#000;
     }
 }
 
+/* Just for Grow page */
+.center-text{
+    .wpb_wrapper{
+        text-align: center;
+        h2:after{
+            margin:20px auto;
+        }
+    }
+}

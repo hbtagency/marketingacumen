@@ -61,11 +61,14 @@
             </div>
          </div>
       </div>
+      
+      
+
       <?php
         if(is_front_page()){         
             echo do_shortcode("[rev_slider main-slider]");
         }else{?>
-            <div class="header-banner" style="background:url('<?php echo get_template_directory_uri(); ?>/img/banner.jpg') no-repeat;background-size:cover;">
+            <div class="header-banner" style="background:url('<?php do_shortcode('[WP_HEADER_IMAGES]'); ?>') no-repeat;background-size:cover;">
                  <div class="captions">
                       <span class="title"><h1><?php echo ((get_the_title() != "") && (get_the_title() != NULL)) ? get_the_title():$post->post_name;?></h1></span>
                       <span class="desc"></span>

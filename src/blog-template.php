@@ -5,15 +5,14 @@
 get_header(); ?>
 
   <div class="wrap-content container general-content">
-    <div class="site-content col-md-9 col-xs-12 col-sm-12">
+    <div class="site-content col-md-12 col-xs-12 col-sm-12">
       <section id="primary" class="content-area">
         <main id="main" class="site-main">
-       
          <?php if ( have_posts() ) {
           while ( have_posts() ) : the_post(); ?>
             <article id="post-<?php the_ID(); ?>" <?php //post_class(); ?> role="article">
               <header class="entry-header">
-                <h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+                <h2><?php the_title(); ?></h2>
               </header>
               <div class="entry-content">
                 <?php the_content(); ?>
@@ -23,7 +22,7 @@ get_header(); ?>
         } else { ?>
           <article id="post-0" class="post no-results not-found">
             <header class="entry-header">
-              <h1><?php _e( 'Not found', 'voidx' ); ?></h1>
+              <h2><?php _e( 'Not found', 'voidx' ); ?></h2>
             </header>
             <div class="entry-content">
               <p><?php _e( 'Sorry, but your request could not be completed.', 'voidx' ); ?></p>
@@ -35,6 +34,8 @@ get_header(); ?>
         <?php voidx_post_navigation(); ?>
       </section>
       
+      
+      <section class="blog-area">
       <?php
         //for each category, show all posts
         $cat_args=array(
@@ -50,22 +51,42 @@ get_header(); ?>
             );
             $posts=get_posts($args);
             if ($posts) {
-                echo '<p>Category: <a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>' . $category->name.'</a> </p> ';
+                //echo '<p>Category: <a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>' . $category->name.'</a> </p> ';
                 foreach($posts as $post) {
                 setup_postdata($post); ?>
-                <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
+                <article class="col-sm-4">
+                    <div class="img-container clearfix">
+                        <a href="<?php the_permalink() ?>">
+                            <?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                                the_post_thumbnail();
+                            }else{?>
+                                <div style="width:100%;height:200px;background-color:gray;position:relative;">
+                                    <h3 style="position:absolute;left:0;right:0;top:50px;bottom:0;width:200px;height:80px;margin:auto;text-align:center;color:#fff;">
+                                        No Image
+                                    </h3>
+                                </div>
+                            <?php    
+                            }
+                            ?>
+                        </a>
+                    </div>
+                    <div class="blog-item-content">
+                        <span class="blog-item-content-row title clearfix">
+                            <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
+                        </span>
+                        <span class="blog-item-content-row desc clearfix">
+                            <?php the_excerpt(); ?>
+                        </span>
+                        <a class="blog-item-link-button" href="<?php the_permalink() ?>"></a>
+                    </div>
+                </article>
                 <?php
                 } // foreach($posts
             } // if ($posts
             } // foreach($categories
        ?>
-        
-      
-      
-      
+         </section>     
     </div>
-    <div class="siderbar col-md-3 hidden-xs">
-    <?php get_sidebar(); ?>
-    </div>
+
   </div>
 <?php get_footer(); ?>

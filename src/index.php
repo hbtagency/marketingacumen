@@ -1,17 +1,25 @@
-<?php get_header(); ?>
+<?php get_header("blog"); ?>
   <div class="wrap-content container general-content">
-    <div class="site-content col-md-9 col-xs-12 col-sm-12">
+    <div class="site-content col-md-12 col-xs-12 col-sm-12">
       <section id="primary" class="content-area">
         <main id="main" class="site-main">
         <?php if ( have_posts() ) {
           while ( have_posts() ) : the_post(); ?>
-            <?php $catgory = get_the_category(); 
+            <?php //$catgory = get_the_category(); 
              ?> 
             <?php if($catgory[0]->name != "TEMPLATE ElEMENT") : ?> 
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
-              <header class="entry-header">
-                <h2><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+              <header class="entry-header blog-header">
+                <?php
+                    if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                    the_post_thumbnail();
+                    }
+                ?>
+                <h2>
+                    <?php the_title(); ?>
+                </h2>
               </header>
+              <br/>
               <div class="entry-content">
                 <?php the_content(); ?>
               </div>
@@ -30,11 +38,9 @@
           </article>
         <?php } ?>
         </main>
-        <?php voidx_post_navigation(); ?>
+        <?php //voidx_post_navigation(); ?>
       </section>
     </div>
-    <div class="siderbar col-md-3 hidden-xs hidden-sm">
-    <?php get_sidebar(); ?>
-    </div>
+    <?php //get_sidebar(); ?>
   </div>
 <?php get_footer(); ?>

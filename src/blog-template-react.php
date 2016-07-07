@@ -75,6 +75,7 @@ get_header(); ?>
     class Post extends React.Component{
         constructor(props){
             super(props);
+
         }
         
         render(){
@@ -82,7 +83,18 @@ get_header(); ?>
                 <article className="col-sm-4">
                     <div className="img-container clearfix">
                         <a href={this.props.post_data.link}>
-                            <img src={this.props.post_data.featured_image}/>
+                             {
+                                this.props.post_data.featured_image ? (
+                                    <img src={this.props.post_data.featured_image}/>
+                                ):(
+                                    <div style="width:100%;height:200px;background-color:gray;position:relative;">
+                                        <h3 style="position:absolute;left:0;right:0;top:50px;bottom:0;width:200px;height:80px;margin:auto;text-align:center;color:#fff;">
+                                            No Image
+                                        </h3>
+                                    </div>
+                                )
+                             }
+                            
                         </a>
                     </div>
                     <div className="blog-item-content">
@@ -107,6 +119,7 @@ get_header(); ?>
             let category_url = root_url + "wp-json/wp/v2/posts/?filter[category_name]=" +  event.target.value;
             
             console.log(category_url);
+            
             //Fetch all posts from Rest API ++++
             fetch(category_url)
             .then((res) => {
@@ -147,8 +160,6 @@ get_header(); ?>
     .catch((err)=>{
         console.log(err);
     });
-    
-
     
     //Fetch all categories from Rest API +++++
     fetch(category_url)

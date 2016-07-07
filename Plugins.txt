@@ -1,0 +1,6 @@
+1.contact-form-7
+2.demomentsomtres-vc-cpw
+3.js_composer
+4.rest-api
+5.revslider
+6.wp-header-images

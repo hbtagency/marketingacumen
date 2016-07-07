@@ -74,3 +74,20 @@
         padding:5px 8px;
     }
 }
+
+@media (max-width:$screen-xxs-max){
+    #category-dropdown{
+        position:relative;
+        left:0;
+        top:0;
+        z-index:100;
+        margin-bottom:15px;
+        select{
+            padding:5px 8px;
+            font-size:12px;
+        }
+    }
+    .blog-area{
+        padding-bottom:15px;
+    }
+}

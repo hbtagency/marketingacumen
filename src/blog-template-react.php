@@ -283,7 +283,7 @@ var CategoryDropdown = function (_React$Component3) {
     _createClass(CategoryDropdown, [{
         key: "change",
         value: function change(event) {
-            var root_url = "<?php bloginfo('url'); ?>";
+            var root_url = "<?php bloginfo('url'); ?>"+ "/index.php/";
             var category_url = root_url + "wp-json/wp/v2/posts/?filter[category_name]=" + event.target.value;
 
             console.log(category_url);
@@ -321,7 +321,7 @@ var CategoryDropdown = function (_React$Component3) {
 }(React.Component);
 
 //var root_url = "http://localhost:3001/marketingacumen/index.php/";
-var root_url = "<?php bloginfo('url'); ?>";
+var root_url = "<?php bloginfo('url'); ?>"+ "/index.php/";
 var post_url = root_url + "wp-json/wp/v2/posts";
 var category_url = root_url + "wp-json/wp/v2/categories";
 
